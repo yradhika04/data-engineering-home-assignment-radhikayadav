@@ -15,10 +15,12 @@ Our company has recently launched a new product and we are looking to analyze th
 
 ### Setting Up Your Environment:
 
-Create a new Snowflake account (free for 30 days) and set up a database named home_assignment.
-Install dbt (data build tool) and configure it to connect to your Snowflake database.
+- Create a free Snowflake account (30-day trial is sufficient) it's free!
+- Create a database named: `home_assignment`
+- Install dbt and configure it to connect to your Snowflake account.
 
 - For this you will need to create a `profiles.yml` file in a folder in `~/.dbt`
+
 - The content of this should take the following format
 
 ```yml
@@ -92,7 +94,7 @@ Calculate the total sales amount for each order.
 
 - Document each step of your process, explaining your setup, transformations, and any decisions made during the assignment in a file named `DECISIONS.md`.
 - Publish your project to a public GitHub repository and share the link with us by email.
-- Incldue a `README.md` file with instructions on how to run your project.
+- Include a `README.md` file with instructions on how to run your project.
 - The queries to answer the questions should be included in the `queries` folder in separate `.sql` files.
 
 ## Evaluation Criteria
