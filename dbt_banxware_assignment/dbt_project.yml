@@ -6,7 +6,7 @@ name: 'banxware_assignment'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'banxware_assignment'
+profile: 'dbt_banxware_assignment'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -32,5 +32,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   banxware_assignment:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  banxware_assignment:
+    sales: # name of the CSV file
+      +alias: raw_sales_data # database table name
+    customers:
+      +alias: raw_customer_data

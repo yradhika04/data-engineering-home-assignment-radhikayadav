@@ -1,0 +1,24 @@
+
+sources:
+  - name: product_data
+    description: "Data about customers and orders from the CSV files"
+    database: home_assignment
+    schema: product_data
+    tables:
+      - name: raw_sales_data
+        description: "Information about one order per row"
+        columns:
+          - name: order_id
+            description: "Primary key"
+            data_tests:
+              - unique
+              - not_null
+
+      - name: raw_customer_data
+        description: "Information about one customer per row"
+        columns:
+          - name: id
+            description: "Primary key"
+            data_tests:
+              - unique
+              - not_null
